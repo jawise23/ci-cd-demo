@@ -6,7 +6,6 @@ fn get_greeting() -> String {
     "Hello, Rustaceans".to_string()
 }
 
-
 #[cfg(test)]
 mod tests {
     use super::*;
