@@ -1,9 +1,13 @@
 fn main() {
-    println!("{}", get_greeting());
+    println!("{}", excited_greeting());
 }
 
 fn get_greeting() -> String {
-    "Hello, Rustaceans!".to_string()
+    "Hello, Rustaceans".to_string()
+}
+
+fn excited_greeting() -> String {
+    format!("{}!!!", get_greeting())
 }
 
 #[cfg(test)]
