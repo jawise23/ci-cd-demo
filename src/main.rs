@@ -16,6 +16,6 @@ mod tests {
 
     #[test]
     fn test_get_greeting() {
-        assert_eq!(get_greeting(), "Hello, Rustaceans!");
+        assert_eq!(excited_greeting(), "Hello, Rustaceans!!!");
     }
 }
