@@ -1,3 +1,4 @@
+
 [![Rust CI](https://github.com/jawise23/ci-cd-demo/actions/workflows/rust.yml/badge.svg)](https://github.com/jawise23/ci-cd-demo/actions/workflows/rust.yml)
 
 # 🚀 Rust CI/CD Template
@@ -16,6 +17,7 @@ A minimal, modern Rust starter template with:
 ```bash
 cargo build
 cargo test
+
 ```
 
 ---
@@ -56,3 +58,4 @@ The included GitHub Actions workflow (`.github/workflows/rust.yml`) runs on push
 ## 📄 License
 
 MIT © 2024 James Wise
+
