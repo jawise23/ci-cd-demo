@@ -1,3 +1,5 @@
+[![Rust CI](https://github.com/jawise23/ci-cd-demo/actions/workflows/rust.yml/badge.svg)](https://github.com/jawise23/ci-cd-demo/actions/workflows/rust.yml)
+
 # 🚀 Rust CI/CD Template
 
 A minimal, modern Rust starter template with:
