@@ -31,3 +31,9 @@ jobs:
 
       - name: Run cargo audit
         run: cargo audit
+
+      - name: Run cargo fmt
+        run: cargo fmt -- --check
+
+      - name: Run cargo clippy
+        run: cargo clippy -- -D warnings
