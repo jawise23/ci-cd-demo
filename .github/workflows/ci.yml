@@ -14,11 +14,31 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
+      - name: Cache Cargo registry
+        uses: actions/cache@v3
+        with:
+          path: ~/.cargo/registry
+          key: ${{ runner.os }}-cargo-registry-${{ hashFiles('**/Cargo.lock') }}
+          restore-keys: ${{ runner.os }}-cargo-registry-
+
+      - name: Cache Cargo build
+        uses: actions/cache@v3
+        with:
+          path: target
+          key: ${{ runner.os }}-cargo-build-${{ hashFiles('**/Cargo.lock') }}
+          restore-keys: ${{ runner.os }}-cargo-build-
+
       - name: Install Rust
         uses: actions-rs/toolchain@v1
         with:
           toolchain: stable
           override: true
+
+      - name: Check formatting
+        run: cargo fmt -- --check
+
+      - name: Run Clippy
+        run: cargo clippy -- -D warnings
 
       - name: Build
         run: cargo build --verbose
@@ -31,9 +51,3 @@ jobs:
 
       - name: Run cargo audit
         run: cargo audit
-
-      - name: Run cargo fmt
-        run: cargo fmt -- --check
-
-      - name: Run cargo clippy
-        run: cargo clippy -- -D warnings
