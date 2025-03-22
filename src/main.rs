@@ -1,10 +1,10 @@
 fn main() {
-    println!("{}", excited_greeting());
+    println!("{}", get_greeting());
 }
 
 fn get_greeting() -> String {
     "Hello, Rustaceans".to_string()
-
+}
 
 #[cfg(test)]
 mod tests {
@@ -12,6 +12,6 @@ mod tests {
 
     #[test]
     fn test_get_greeting() {
-
+        assert_eq!(get_greeting(), "Hello, Rustaceans");
     }
 }
